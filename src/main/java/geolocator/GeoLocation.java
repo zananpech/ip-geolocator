@@ -1,5 +1,6 @@
 package geolocator;
-
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 public class GeoLocation {
 
     private String as;
@@ -118,6 +119,9 @@ public class GeoLocation {
 
     public void setZip(String zip) {
         this.zip = zip;
+    }
+    public String toString() {
+        return ReflectionToStringBuilder.toString(this, ToStringStyle.MULTI_LINE_STYLE);
     }
 
 }
